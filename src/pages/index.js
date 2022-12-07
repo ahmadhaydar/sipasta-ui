@@ -1,5 +1,6 @@
 import { useColorMode, Flex, Box } from "@chakra-ui/react";
 import { CodeEditorProvider } from "src/contexts/CodeEditorContext";
+import Head from 'next/head';
 import { CodeEditor } from "src/components/CodeEditor";
 import { NavBar } from "src/components/NavBar";
 import { useRouter } from "next/router";
@@ -14,6 +15,9 @@ export default function Home() {
   } = router
   return (
     <CodeEditorProvider>
+      <Head>
+        <title>SiPasta - Create New Pasta</title>
+      </Head>
       <Flex h="100vh" w="100vw" style={{
         backgroundImage: `url("/rpk-bg.png")`,
         backgroundSize: "cover"

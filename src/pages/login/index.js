@@ -11,6 +11,7 @@ import {
 import { FcGoogle } from "react-icons/fc";
 import { FaPaste } from "react-icons/fa";
 import { signIn } from "src/utils/auth";
+import Head from 'next/head';
 import { useRouter } from "next/router";
 
 export default function Login() {
@@ -41,6 +42,9 @@ export default function Login() {
   };
   return (
     <Center h="100vh">
+      <Head>
+        <title>SiPasta - Log In</title>
+      </Head>
       <Box bg="Menu" p={10} borderWidth="1px" borderRadius="lg">
         <Center h="100%">
           <VStack verticalAlign="middle">
